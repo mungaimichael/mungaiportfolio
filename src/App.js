@@ -1,18 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { MovieContextProvider } from "./Contexts/MovieContext";
+import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom.min";
+import About from "./About";
 import { GlobalStyle } from "./GlobalStyle";
-import Hero from "./Components/Hero";
+import Homepage from "./Home";
+import Projects from "./Projects";
 
 const App = () => {
   return (
     <Router>
       <GlobalStyle />
-      <MovieContextProvider>
-        <Hero />
-        <Route path="https://www.themoviedb.org/list/24142" />
-      </MovieContextProvider>
-      <Route to="" />
+      <Homepage />
+      <Projects />
+      <About />
     </Router>
   );
 };
